@@ -12,7 +12,6 @@
 
 
 return array(
-
 	/**
 	 * base_url - The base URL of the application.
 	 * MUST contain a trailing slash (/)
@@ -178,6 +177,7 @@ return array(
 			'Fuel\\Core\\Response',
 			'Fuel\\Core\\View',
 			'Fuel\\Core\\ViewModel',
+			'Fuel\\Core\\Validation',
 			'Closure',
 		),
 	),
@@ -257,8 +257,12 @@ return array(
 	/**************************************************************************/
 	/* Always Load                                                            */
 	/**************************************************************************/
-	// 'always_load'  => array(
-
+	'always_load'  => array(
+		'packages'  => array( 
+			'auth', 
+			'orm', 
+		),
+	),
 		/**
 		 * These packages are loaded on Fuel's startup.
 		 * You can specify them in the following manner:
